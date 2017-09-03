@@ -13,7 +13,7 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "windows8srv-64",
       "tools_upload_flavor": "windows",
-      "disk_size": 61440,
+      "disk_size": 20480,
       "vnc_port_min": 5900,
       "vnc_port_max": 5980,
       "floppy_files": [
@@ -39,10 +39,10 @@
       "boot_wait": "2m",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_wait_timeout": "2h",
+      "ssh_wait_timeout": "8h",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "Windows81_64",
-      "disk_size": 61440,
+      "disk_size": 20480,
       "floppy_files": [
         "{{user `autounattend`}}",
         "./scripts/microsoft-updates.bat",
@@ -77,7 +77,7 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "guest_os_type": "win-8.1",
       "parallels_tools_flavor": "win",
-      "disk_size": 61440,
+      "disk_size": 20480,
       "floppy_files": [
         "{{user `autounattend`}}",
         "./scripts/microsoft-updates.bat",
@@ -133,9 +133,9 @@
     }
   ],
   "variables": {
-    "iso_url": "http://download.microsoft.com/download/B/9/9/B999286E-0A47-406D-8B3D-5B5AD7373A4A/9600.16384.WINBLUE_RTM.130821-1623_X64FRE_ENTERPRISE_EVAL_EN-US-IRM_CENA_X64FREE_EN-US_DV5.ISO",
-    "iso_checksum_type": "md5",
-    "iso_checksum": "5e4ecb86fd8619641f1d58f96e8561ec",
+    "iso_url": "./iso/en_windows_8.1_pro_vl_with_update_x64_dvd_6050880.iso",
+    "iso_checksum_type": "sha1",
+    "iso_checksum": "962A1D890987B5877469433928B8C8B8A3E945CD",
     "autounattend": "./answer_files/81/Autounattend.xml"
   }
 }
